@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add An Employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+<h1 style=margin-left:430px;>DO Master</h1>
+<br>
+<div style=margin-left:30px;>
+    <form action="{% url 'Add_DO' %}" method="post" style=margin-left:450px;>
+        {% csrf_token %}
+
+        <label for="do_number">DO Number</label><br>
+        <input type="number" id="do_number" name="do_number" value="{{do_number}}"><br>
+
+        <label for="do_type">DO Type</label><br>
+        <input type="text" id="do_type" name="do_type" value="{{ do_type }}"><br>
+
+        <label for="permit_number">Permit Number</label><br>
+        <input type="number" id="permit_number" name="permit_number" value="{{permit_number}}"><br>
+
+        <label for="material">Material</label><br>
+        <input type="text" id="material" name="material" value="{{material}}"><br>
+
+        <label for="consigner_name">Consigner Name</label><br>
+        <input type="text" id="consigner_name" name="consigner_name" value="{{consigner_name}}"><br>
+
+        <label for="consignee_name">Consignee Name</label><br>
+        <input type="text" id="consignee_name" name="consignee_name" value="{{consignee_name}}"><br>
+
+        <label for="do_issue_date">DO Issue Date</label><br>
+        <input type="Date" id="do_issue_date" name="do_issue_date" value="{{do_issue_date}}"><br>
+
+        <label for="do_validity_date">DO Validity Date</label><br>
+        <input type="Date" id="do_validity_date" name="do_validity_date" value="{{do_validity_date}}"><br>
+
+        <label for="from_city">From City</label><br>
+        <input type="text" id="blood" name="from_city" value="{{from_city}}"><br>
+
+        <label for="to_city">To City</label><br>
+        <input type="text" id="to_city" name="to_city" value="{{to_city}}"><br>
+
+        <label for="total_do_qty">Total DO Qty(MT)</label><br>
+        <input type="number" id="total_do_qty" name="total_do_qty" value="{{total_do_qty}}"><br>
+
+        <label for="allocate_do_qty">Allocate DO Qty(MT)</label><br>
+        <input type="number" id="allocate_do_qty" name="allocate_do_qty" value="{{allocate_do_qty}}"><br>
+
+        <label for="company_name">Company Name</label><br>
+        <input type="text" id="company_name" name="company_name" value="{{company_name}}"><br>
+
+        <label for="branch_name">Branch Name</label><br>
+        <input type="text" id="branch_name" name="branch_name" value="{{ branch_name }}"><br>
+
+        <label for="source">Source</label><br>
+        <input type="text" id="source" name="source" value="{{source}}"><br>
+
+        <label for="destination">Destination</label><br>
+        <input type="text" id="destination" name="destination" value="{{destination}}"><br>
+
+        <label for="do_alias">DO Alias</label><br>
+        <input type="text" id="do_alias" name="do_alias" value="{{do_alias}}"><br>
+
+        <label for="adv_amt_limit">Adv.Amt.Limit</label><br>
+        <input type="number" id="adv_amt_limit" name="adv_amt_limit" value="{{adv_amt_limit}}"><br>
+
+        <label for="diesel_amt_limit">Diesel.Amt.Limit</label><br>
+        <input type="number" id="diesel_amt_limit" name="diesel_amt_limit" value="{{diesel_amt_limit}}"><br>
+
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-primary" href="/" role="button">Back</a>
+    </form>
+</div>
+
+</body>
+</html>
